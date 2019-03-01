@@ -14,7 +14,7 @@ static int __init onload(void)
 	int res;
 	printk("Timer module loaded\n");
 
-	/*Set up timer with callback*/
+	/*Set up timer, see commit e99e88a9d2b067465adaa9c111ada99a041bef9a for api change */
 	timer_setup(&timerlst, timer_callback, 0);
 	printk("Setup timer to fire in 500ms (%ld)\n", jiffies);
 
